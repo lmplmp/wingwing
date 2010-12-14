@@ -1,10 +1,10 @@
-/************************/
-/* Modified by Sanghoon */
-/* RAM:20K, FLASH:128K  */
-/************************/
+/******************************************************/
+/* Link Script Modified by Sanghoon                   */
+/* RAM:20K, FLASH:128K                                */
+/******************************************************/
 
 /*
-Default linker script for STM32F10x_1024K_1024K
+Default linker script for STM32F10x
 Copyright RAISONANCE S.A.S. 2008
 */
 
