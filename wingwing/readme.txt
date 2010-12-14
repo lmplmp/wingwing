@@ -27,4 +27,6 @@
 		Target libraries
 		Newlib C Library	1.18.0	
 		
-		
+	Eclipse CDT Helios
+		Optinal Package
+			C/C++ GDB Hardware Debugging	7.0.0.201009241320	
