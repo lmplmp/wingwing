@@ -26,13 +26,13 @@ monitor flash download = 1
 # Enable Flash Breakpoint
 monitor flash breakpoints = 1
 
-# Load the program executable called "image.elf"
-load out/wingwing.elf
-
 # reset vector
 monitor reg r13 = (0x00000000)
 monitor reg pc = (0x00000004)
 
-break main
-continue
+
+# Load the program executable called "image.elf"
+load out/wingwing.elf
+
+
 
