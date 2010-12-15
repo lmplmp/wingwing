@@ -33,7 +33,5 @@
 	1. Install CodeSourcery ARM Tool-chain
 	2. Install Eclipse CDT
 	3. Install Eclipse CDT Optional Package
-		a. C/C++ GCC Cross Compiler Support
-		b. C/C++ GDB Hardware Debugging
-		c. C/C++ Code Analysis Framework (Codan)
+		a. C/C++ GDB Hardware Debugging
 	4. Install Eclipse SVN Plugin (subclipse)
