@@ -1,8 +1,14 @@
 2010-12-11	Sanghoon Kim	wizest@gmail.com
 --------------------------------------------
 
+## Files
+	wingwing.cproject		- Eclipse CDT configuration backup of '.cproject'
+	wingwing.gdbinit		- GDB initialization backup of '.gdbinit'
+	wingwing-history.txt	- Development log of wingwing project
+	wingwing-readme.txt		- This file
+	
+	
 ## Build Configuration
-
 	# Compiler Flags
 		-mcpu=cortex-m3
 		-mthumb
@@ -15,7 +21,6 @@
 	
 	
 ## Tool-chain Version
-
 	Sourcery G++ Lite 2010.09-51
 		GNU programming tools
 		GNU Compiler Collection	4.5.1	
@@ -29,9 +34,9 @@
 
 		
 ## Development Environment
-
 	1. Install CodeSourcery ARM Tool-chain
 	2. Install Eclipse CDT
 	3. Install Eclipse CDT Optional Package
 		a. C/C++ GDB Hardware Debugging
 	4. Install Eclipse SVN Plugin (subclipse)
+	
