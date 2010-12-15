@@ -32,6 +32,8 @@ There will be a link error if there is not this amount of RAM free at the end.
 */
 _Minimum_Stack_Size = 0x100 ;
 
+PROVIDE (__HEAP_START = _susrstack ); /* by sanghoon */
+
 
 /* include the memory spaces definitions sub-script */
 
@@ -143,11 +145,6 @@ SECTIONS
 	    . = ALIGN(4);
         _eusrstack = . ;
     } >RAM
-    
-
-   
-  
-    
     
     
     /* after that it's only debugging information. */
