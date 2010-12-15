@@ -29,7 +29,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/cmsis}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/peripherals}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/os}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1923043386" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
 								<option id="gnu.c.compiler.option.misc.other.840714548" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -march=armv7-m" valueType="string"/>
@@ -54,7 +53,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/cmsis}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/peripherals}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/os}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.224032681" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
