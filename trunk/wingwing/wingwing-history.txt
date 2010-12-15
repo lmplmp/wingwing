@@ -1,0 +1,7 @@
+## wingwing micromouse project
+
+2010-11-28	jlink 디버거, stm32 보드 구입 - www.eleparts.com
+2010-12-04	wingwing 프로젝트 시작
+2010-12-11	Startup 코드 완료 - ST Peripheral library 코드 활용
+2010-12-13	SVN 저장소 생성 - https://wingwing.googlecode.com/svn/trunk
+2010-12-14	디버깅 환경 완료 - Eclipse GDB hardware debugging 이용
