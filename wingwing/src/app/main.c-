@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include "stm32f10x.h"
+
+volatile int _cnt;
+
+int main(void) {
+	CoreDebug->DEMCR = CoreDebug_DEMCR_TRCENA_Msk;
+
+	*((uint32_t*) 0xE0040010) = 12; //Async Clock Prescaler Register
+	*((uint32_t*) 0xE0040304) = 0; //Formatter and Flush Control Register
+	*((uint32_t*) 0xE00400F0) = 1; // Selected Pin Protocol Register
+	DBGMCU->CR = 0x00000020; // Set asynchronuous communication via DBGMCU_CR
+	ITM->LAR = 0xC5ACCE55;
+	ITM->TCR |= ITM_TCR_ITMENA_Msk | ITM_TCR_SYNCENA_Msk | (1UL
+			<< ITM_TCR_ATBID_Pos);
+	ITM->TER |= 1UL;
+	ITM->TPR |= 1UL;
+
+	//	CoreDebug->DEMCR = CoreDebug_DEMCR_TRCENA_Msk;
+	//	ITM->TCR |= ITM_TCR_ITMENA_Msk;
+	//	ITM->TER |= 1;
+
+	while (1) {
+		++_cnt;
+
+		//		ITM_SendChar('h');
+		//		ITM_SendChar('e');
+		//		ITM_SendChar('l');
+		//		ITM_SendChar('l');
+		//		ITM_SendChar('o');
+		puts("hello~\n");
+	}
+
+	return 0;
+}

@@ -29,6 +29,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/cmsis}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/peripherals}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/usb}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/app}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1923043386" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
 								<option id="gnu.c.compiler.option.misc.other.840714548" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -march=armv7-m" valueType="string"/>
@@ -53,9 +55,21 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/cmsis}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/peripherals}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/bas/include/sys/usb}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/wingwing/src/app}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.224032681" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.1202601572.996295157" name="/" resourcePath="src/bas/postbuild">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.base.274011758" name="cdt.managedbuild.toolchain.gnu.base" superClass="cdt.managedbuild.toolchain.gnu.base" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.29737741" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1554461291"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.837816186" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base.1743457545"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.209184445" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base.2115699692"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.84633806" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base.220033112"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.1975415683" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base.1993731863"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.base.2049333098" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base.1537475270"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
