@@ -1,9 +1,9 @@
 /******************** (C) COPYRIGHT 2010 STMicroelectronics ********************
-* File Name          : main.c
+* File Name          : usb_init.c
 * Author             : MCD Application Team
 * Version            : V3.2.1
 * Date               : 07/05/2010
-* Description        : Virtual Com Port Demo main file
+* Description        : Initialization routines & global variables
 ********************************************************************************
 * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
 * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
@@ -14,57 +14,50 @@
 *******************************************************************************/
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f10x.h"
 #include "usb_lib.h"
-#include "usb_desc.h"
-#include "hw_config.h"
-#include "usb_pwr.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+/*  The number of current endpoint, it will be used to specify an endpoint */
+ uint8_t	EPindex;
+/*  The number of current device, it is an index to the Device_Table */
+/* uint8_t	Device_no; */
+/*  Points to the DEVICE_INFO structure of current device */
+/*  The purpose of this register is to speed up the execution */
+DEVICE_INFO *pInformation;
+/*  Points to the DEVICE_PROP structure of current device */
+/*  The purpose of this register is to speed up the execution */
+DEVICE_PROP *pProperty;
+/*  Temporary save the state of Rx & Tx status. */
+/*  Whenever the Rx or Tx state is changed, its value is saved */
+/*  in this variable first and will be set to the EPRB or EPRA */
+/*  at the end of interrupt process */
+uint16_t	SaveState ;
+uint16_t  wInterrupt_Mask;
+DEVICE_INFO	Device_Info;
+USER_STANDARD_REQUESTS  *pUser_Standard_Requests;
+
 /* Extern variables ----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
 /*******************************************************************************
-* Function Name  : main.
-* Description    : Main routine.
+* Function Name  : USB_Init
+* Description    : USB system initialization
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-int main(void)
+void USB_Init(void)
 {
-  Set_System();
-  Set_USBClock();
-  USB_Interrupts_Config();
-  USB_Init();
-  
-  while (1)
-  {
-  }
+  pInformation = &Device_Info;
+  pInformation->ControlState = 2;
+  pProperty = &Device_Property;
+  pUser_Standard_Requests = &User_Standard_Requests;
+  /* Initialize devices one by one */
+  pProperty->Init();
 }
-#ifdef USE_FULL_ASSERT
-/*******************************************************************************
-* Function Name  : assert_failed
-* Description    : Reports the name of the source file and the source line number
-*                  where the assert_param error has occurred.
-* Input          : - file: pointer to the source file name
-*                  - line: assert_param error line source number
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void assert_failed(uint8_t* file, uint32_t line)
-{
-  /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-
-  /* Infinite loop */
-  while (1)
-  {}
-}
-#endif
 
 /******************* (C) COPYRIGHT 2010 STMicroelectronics *****END OF FILE****/
