@@ -35,6 +35,8 @@
  * Output         : None.
  * Return         : None.
  *******************************************************************************/
+
+volatile int _cnt = 0;
 int main(void) {
 	Set_System();
 	Set_USBClock();
@@ -42,7 +44,9 @@ int main(void) {
 	USB_Init();
 
 	for (;;)
-		;
+		_cnt++;
+
+	return 0;
 }
 #ifdef USE_FULL_ASSERT
 /*******************************************************************************
