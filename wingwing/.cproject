@@ -41,7 +41,7 @@
 								<option id="gnu.c.link.option.nodeflibs.311250679" name="Do not use default libraries (-nodefaultlibs)" superClass="gnu.c.link.option.nodeflibs" value="false" valueType="boolean"/>
 								<option id="gnu.c.link.option.nostdlibs.847007460" name="No startup or default libs (-nostdlib)" superClass="gnu.c.link.option.nostdlibs" value="false" valueType="boolean"/>
 								<option id="gnu.c.link.option.paths.883138425" name="Library search path (-L)" superClass="gnu.c.link.option.paths"/>
-								<option id="gnu.c.link.option.ldflags.1089803649" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-Wl,-Map,output.map -T ../stm32f103rb.ld" valueType="string"/>
+								<option id="gnu.c.link.option.ldflags.1089803649" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-gdwarf-3 -gstrict-dwarf -Wl,-Map,output.map -T ../stm32f103rb.ld" valueType="string"/>
 								<option id="gnu.c.link.option.other.1026742222" name="Other options (-Xlinker [option])" superClass="gnu.c.link.option.other"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1295508257" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -60,16 +60,6 @@
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.224032681" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.1202601572.996295157" name="/" resourcePath="src/bas/postbuild">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.base.274011758" name="cdt.managedbuild.toolchain.gnu.base" superClass="cdt.managedbuild.toolchain.gnu.base" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.archiver.base.29737741" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.1554461291"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.837816186" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base.1743457545"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.209184445" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base.2115699692"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.84633806" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base.220033112"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.1975415683" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base.1993731863"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.base.2049333098" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base.1537475270"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
