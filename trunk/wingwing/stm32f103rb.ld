@@ -32,7 +32,7 @@ There will be a link error if there is not this amount of RAM free at the end.
 */
 _Minimum_Stack_Size = 0x100 ;
 
-PROVIDE (__HEAP_START = _ebss ); /* by wizest */
+/*PROVIDE (__HEAP_START = _ebss );*/ /* by wizest */
 
 
 /* include the memory spaces definitions sub-script */
